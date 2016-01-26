@@ -1,8 +1,8 @@
 class-lists
 ===========
 
-![npm version](https://badge.fury.io/js/class-lists.svg)
-![travis-ci](https://travis-ci.org/joaomilho/class-lists.svg)
+[![Version](http://img.shields.io/npm/v/class-lists.svg)](https://www.npmjs.org/package/class-lists)
+[![travis-ci](https://travis-ci.org/joaomilho/class-lists.svg)](https://travis-ci.org/joaomilho/class-lists)
 
 A simple javascript utility for conditionally joining class names together, inspired by [classNames](https://github.com/JedWatson/classnames) but with a twist.
 
