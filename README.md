@@ -1,6 +1,9 @@
 class-lists
 ===========
 
+![npm version](https://badge.fury.io/js/class-lists.svg)
+![travis-ci](https://travis-ci.org/joaomilho/class-lists.svg)
+
 A simple javascript utility for conditionally joining class names together, inspired by [classNames](https://github.com/JedWatson/classnames) but with a twist.
 
 ###### Install with npm
@@ -35,25 +38,25 @@ classPairs('header', 'is-visible'); // => 'header is-visible'
 // strings + lists
 classPairs('header',
   [visible, 'is-visible'],
-  [open, 'is-open'],  
+  [open, 'is-open'],
 ); // => 'header is-visible'
 
-// booleans    
+// booleans
 classPairs('header',
   [visible, 'is-visible', 'is-hidden'],
   [open, 'is-open', 'is-closed']
  ); // => 'header is-visible is-closed'
- 
+
 // with css modules
 var styles = {
   'is-visible': 'is-visible-fn38j',
   'is-open': 'is-open-g3oiw'
 } // this is a mock! :D
- 
+
 classPairs(styles, 'header',
   [visible, 'is-visible'],
   [open, 'is-open']
- ); // => 'header is-visible-fn38j' 
+ ); // => 'header is-visible-fn38j'
 ```
 
 ### Main difference from classnames:
