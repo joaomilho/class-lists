@@ -4,7 +4,8 @@ before_install:
 node_js:
   - "0.10"
   - "0.12"
-  - "iojs"
+  - "4.2"
+  - "5.0"
 env:
   - TEST_SUITE=unit
-script: "npm run-script $TEST_SUITE"
+script: "npm test"
