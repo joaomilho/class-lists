@@ -138,3 +138,11 @@ Here are my local benchmarks:
 ## License
 
 [MIT](LICENSE)
+
+## Contributing
+
+* Send PR with tests passing (`npm test`). It will also ensure that the code has good standards with `standard`. Make sure your changes do not degrade performance considerable, preferably not at all. Do not bump version in your PR.
+* Once the PR is ok, then update the version according to SemVer and I'll realease it.
+
+That's all.
+
