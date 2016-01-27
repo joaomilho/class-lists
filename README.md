@@ -26,23 +26,23 @@ Alternatively, you can simply include `index.js` on your page with a standalone 
 
 ## Usage
 
-The `classPairs` function takes [ideally] any number of arguments which can be either a string or a tuple. Since tuples are not first class citizens in JS, they are represented by regular arrays (with 2 or 3 items).
+The `classLists` function takes [ideally] any number of arguments which can be either a string or a tuple. Since tuples are not first class citizens in JS, they are represented by regular arrays (with 2 or 3 items).
 
 ```js
 var visible = true,
     open = false
 
 // strings
-classPairs('header', 'is-visible'); // => 'header is-visible'
+classLists('header', 'is-visible'); // => 'header is-visible'
 
 // strings + lists
-classPairs('header',
+classLists('header',
   [visible, 'is-visible'],
   [open, 'is-open'],
 ); // => 'header is-visible'
 
 // booleans
-classPairs('header',
+classLists('header',
   [visible, 'is-visible', 'is-hidden'],
   [open, 'is-open', 'is-closed']
  ); // => 'header is-visible is-closed'
@@ -53,7 +53,7 @@ var styles = {
   'is-open': 'is-open-g3oiw'
 } // this is a mock! :D
 
-classPairs(styles, 'header',
+classLists(styles, 'header',
   [visible, 'is-visible'],
   [open, 'is-open']
  ); // => 'header is-visible-fn38j'
@@ -76,13 +76,13 @@ classNames(opts) // => 'is-open'
 // classNames version es6
 classNames({[‘is-${state}‘]: true}) // => 'is-open'
 
-// classPairs version
-classPairs([true, ‘is-${state}‘]) // => 'is-open'
+// classLists version
+classLists([true, ‘is-${state}‘]) // => 'is-open'
 ```
 
 ###### Differece #2
 
-Using pairs instead of objects gives you the ability to have classes defined based on a boolean for both true and false scenarios:
+Using tuples instead of objects gives you the ability to have classes defined based on a boolean for both true and false scenarios:
 
 ```
 // classNames version
@@ -93,8 +93,8 @@ classNames({
   'is-closed': !open
 })
 
-// classPairs version
-classPairs([
+// classLists version
+classLists([
   open, ['is-open', 'is-closed]
 ])
 ```
