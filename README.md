@@ -70,14 +70,17 @@ var state = 'open'
 
 // classNames version es5
 var opts = {}
-opts['is-' + state] = true
+opts['is-' + state] = state
 classNames(opts) // => 'is-open'
 
-// classNames version es6
-classNames({[‘is-${state}‘]: true}) // => 'is-open'
+// classLists version es5
+classLists([state, 'is-' + state']) // => 'is-open'
 
-// classLists version
-classLists([true, ‘is-${state}‘]) // => 'is-open'
+// classNames version es6
+classNames({[‘is-${state}‘]: state}) // => 'is-open'
+
+// classLists version es6
+classLists([state, ‘is-${state}‘]) // => 'is-open'
 ```
 
 ###### Differece #2
